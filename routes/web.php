@@ -9,3 +9,11 @@ Route::get('/', function () {
 Route::get('/se', function() {
     return view('template.default');
 });
+
+Route::get('/mycontroller', [App\Http\Controllers\MyController::class, 'index']);
+Route::get('/calculate', [App\Http\Controllers\MyController::class, 'inFo']);
+Route::post('/calculate', [App\Http\Controllers\MyController::class, 'calculate']);
+
+Route::post('/submit-form', [App\Http\Controllers\MyController::class, 'submitForm']);
+
+Route::resource('/flights', App\Http\Controllers\FlightController::class);
