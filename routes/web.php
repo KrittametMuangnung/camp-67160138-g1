@@ -17,3 +17,5 @@ Route::post('/calculate', [App\Http\Controllers\MyController::class, 'calculate'
 Route::post('/submit-form', [App\Http\Controllers\MyController::class, 'submitForm']);
 
 Route::resource('/flights', App\Http\Controllers\FlightController::class);
+
+Route::resource('/pokedexs', App\Http\Controllers\PokedexsController::class);
